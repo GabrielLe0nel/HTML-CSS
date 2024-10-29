@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXC 7</title>
+    <style>
+        * {
+            margin: 0; /* Remove margens entre elementos */
+            padding: 0; /* Remove padding entre elementos */
+        }
+
+        body, html {
+            background-color: #aaaa; /* Cor de fundo cinza claro */
+            border: 2px solid #992233; /* Bordas para body e html */
+        }
+
+        .box {
+            height: 100px; /* Altura de 100px */
+            width: 100px; /* Largura de 100px */
+            border: 1px solid white; /* Borda visível */
+            display: inline-block; /* Permite alinhamento lado a lado */
+            margin: 10px; /* Margem para cada div */
+            outline: 2px solid red; /* Linha de outline visível */
+        }
+
+        #box1 {
+            background-color: #0000ff; /* Cor azul */
+            border-top: 4px solid white; /* Borda de topo com estilo */
+            border-radius: 5%; /* Cantos arredondados */
+            padding: 20px; /* Padding para box1 */
+        }
+
+        #box1:hover {
+            background-color: green; /* Efeito hover para box1 */
+        }
+
+        #box2 {
+            background-color: #7ae77a; /* Cor verde claro */
+            border-radius: 5% 7% 0 0; /* Arredondar cantos do box2 */
+        }
+
+        #box2:hover {
+            transform: scale(1.5); /* Efeito de zoom ao passar o mouse */
+        }
+
+        #box3 {
+            background: linear-gradient(to left, red, yellow); /* cor de fundo gradiente para box3 */
+        }
+
+        #box4 {
+            background-color: #2d2d3a; /* Cor escura no fundo */
+            border-radius: 50%; /* Borda definida para um círculo para box4 */
+            text-align: center; /* Alinha o texto ao centro */
+            height: 100px; /* Altura */
+            opacity: 0.5; /* Reduz a opacidade */
+            box-shadow: 10px 16px teal; /* Sombra suave */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="lista">
+        <section id="exc7">
+            <h4>Documento HTML com quatro divs e observe cada um dos itens.</h4>
+            <div class="box" id="box1">div-1</div>
+            <div class="box" id="box2">div-2</div>
+            <div class="box" id="box3">div-3</div>
+            <div class="box" id="box4">div-4</div>
+<h4>Type a;</h4>
+            <ol type="a">
+                <li>As divs têm 100px de altura e largura, conforme definido na classe .box.</li>
+                <li>As bordas visíveis foram aplicadas a todas as divs com a classe .box.</li>
+                <li>Cada div (box1, box2, box3) recebeu uma cor de fundo diferente.</li>
+                <li>O corpo da página tem um fundo cinza claro e uma borda visível.</li>
+                <li>Não há margens entre os elementos html, body e divs, pois foram definidas para zero.</li>
+                <li>As divs estão alinhadas lado a lado devido à propriedade display: inline-block.</li>
+                <li>A borda de topo da div box1 foi alterada para ser mais espessa e branca.</li>
+                <li>Os cantos da box1 são arredondados em 5% e box2 em 5% e 7%.</li>
+                <li>A box4 foi transformada em um círculo usando border-radius: 50%.</li>
+                <li>O texto na box4 está centralizado, e sua altura é a mesma da div.</li>
+                <li>Uma linha de outline visível foi aplicada a cada uma das divs.</li>
+                <li>Uma margem de 10px foi definida para cada div.</li>
+                <li>O box3 tem um fundo com cor gradiente linear.</li>
+                <li>O box1 possui um padding de 20px, aumentando o espaço interno.</li>
+                <li>A opacidade do box4 foi reduzida para 0.5, tornando-a semi-transparente.</li>
+                <li>O efeito hover muda a cor de fundo do box1 e aumenta o tamanho do box2.</li>
+                <li>Uma sombra suave foi aplicada ao box4, alterando a aparência do elemento.</li>
+            </ol>
+        </section>
+    </div>
+</body>
+</html>
