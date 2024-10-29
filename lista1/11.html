@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 11 - Chat</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #1a1a1a;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .chat-container {
+            background-color: #2c2c2c;
+            position: fixed;
+            width: 320px;
+            padding: 15px;
+            border-radius: 12px;
+            bottom: 15px;
+            right: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+        }
+
+        .chat {
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .msg, .rsp {
+            background-color: #683a3a;
+            color: #333333;
+            padding: 12px;
+            border-radius: 8px;
+            max-width: 210px;
+            position: relative;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .msg img, .rsp img {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .msg-time, .rsp-time {
+            font-size: 9px;
+            color: #888;
+            position: absolute;
+            bottom: -10px;
+            right: 6px;
+        }
+
+        .rsp {
+            background-color: #2600ff;
+            color: #000;
+            margin-left: auto;
+            text-align: right;
+        }
+
+        .input-section {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 12px;
+        }
+
+        .input-section input[type="text"] {
+            width: 75%;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+        }
+
+        .input-section input[type="submit"] {
+            width: 22%;
+            background-color: #00e1ff;
+            border-radius: 4px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .input-section input[type="submit"]:hover {
+            background-color: #ffa500;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat">
+            <div class="msg">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNt9UpcsobJNOGFHPeBt-88iRmqjflBnIjhw&s" alt="Foto avatar" class="avatar"> Olá, tudo bem?
+                <span class="msg-time">00:50</span>
+            </div>
+        </div>
+
+        <div class="chat">
+            <div class="rsp">
+                Estou bem sim, e você?
+                <img src="https://png.pngtree.com/png-clipart/20210915/ourlarge/pngtree-user-avatar-placeholder-black-png-image_3918427.jpg" alt="Foto Avatar2" class="avatar">
+                <span class="rsp-time">00:55</span>
+            </div>
+        </div>
+
+        <div class="chat">
+            <div class="msg">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNt9UpcsobJNOGFHPeBt-88iRmqjflBnIjhw&s" alt="Foto avatar" class="avatar"> Vamos sair hoje? Sabe, conversar e Lorem ipsum dolor sit amet consectetur...
+                <span class="msg-time">01:01</span>
+            </div>
+        </div>
+
+        <div class="chat">
+            <div class="rsp">
+                Criatura...
+                <img src="https://png.pngtree.com/png-clipart/20210915/ourlarge/pngtree-user-avatar-placeholder-black-png-image_3918427.jpg" alt="Foto Avatar2" class="avatar">
+                <span class="rsp-time">00:55</span>
+            </div>
+        </div>
+
+        <div class="input-section">
+            <input id="msg" type="text" placeholder="Digite sua mensagem">
+            <input type="submit" value="Enviar">
+        </div>
+    </div>
+</body>
+</html>
