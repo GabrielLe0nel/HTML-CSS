@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo especificidade de seletores</title>
+    <style>
+        /* Regra 1: Vermelho para todos os <li> */
+        li { color: red; }
+        /* Regra 2: Verde para itens com classe .churras */
+        .churras { color: green; }
+        /* Regra 3: Cinza para itens com classe .fruta */
+        .fruta { color: gray; }
+        /* Regra 4: Branco para <li> com classe .churras que é irmão de outro <li> */
+        li + li.churras { color: white; }
+        /* Regra 5: Magenta para .churras com atributo draggable="true" */
+        .churras[draggable="true"] { color: magenta; }
+        /* Regra 6: Azul para itens com IDs lip1, lip2, lip3 */
+        #lip1, #lip2, #lip3 { color: blue; }
+        /* Regra 7: Laranja para #lip3 que também é .fruta */
+        #lip3.fruta { color: orange; }
+        /* Regra 8: Não se aplica, pois não existe #lip5 */
+        ol > li.churras#lip5 { color: purple; }
+    </style>
+</head>
+<body>
+    <ol>
+        <!--item 1--> <li id="lip0">Abacaxi - vermelho, regra 1</li>
+        <!--item 2--> <li class="fruta">Melão - cinza, regra 3</li>
+        <!--item 3--> <li id="lip2" class="fruta">Pera - azul, regra 6</li>
+        <!--item 4--> <li id="lip3" class="fruta">Uva - laranja, regra 7</li>
+        <!--item 5--> <li id="lip4" class="fruta">Maçã - cinza, regra 3</li>
+        <!--item 6--> <li class="churras">Carne - branco, regra 4</li>
+        <!--item 7--> <li class="churras">Linguiça - branco, regra 4</li>
+        <!--item 8--> <li id="lip7" class="churras" draggable="true">Pão de alho - magenta, regra 5</li>
+    </ol>
+</body>
+</html>
